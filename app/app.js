@@ -63,7 +63,7 @@ var ITEMS = [
     {
       itemType: "Multi-purpose Knife",
       itemPrice: "$35.00",
-      itemImage: ".png",
+      itemImage: "7.png",
       itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   SEVEN
@@ -103,7 +103,31 @@ var ITEMS = [
   function loadData() {
     $.each(ITEMS, function (index, item) {
       console.log(item.itemType);
-      $("#app").append(``);
+      $("#app").append(`<section id="${index}">
+      <div class="row">
+        <h1>${item.itemType}</h1>
+        <div class="col">
+          <div class="top">
+            <div class="itemPrice">${item.itemPrice}</div>
+            <br />
+          </div>
+    
+          <div class="imgall">
+            <div class="itemImage">
+              <img src="img/${item.itemImage}" alt="" />
+            </div>
+    
+            <div class="desc">
+              <div class="itemDesc">${item.itemDesc}</div>
+              <br />
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    `);
     });
   }
   
