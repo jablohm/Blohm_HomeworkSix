@@ -102,7 +102,7 @@ var ITEMS = [
   
   function loadData() {
     $.each(ITEMS, function (index, item) {
-      console.log(item.itemType);
+      // console.log(item.itemType);
       $("#app").append(`<section id="${index}">
       <div class="row">
         <h1>${item.itemType}</h1>
@@ -136,10 +136,43 @@ var ITEMS = [
   
   function initListeners() {
     $(".col").click(function (e) {
-      let itemID = e.currentTarget.id;
-      console.log(itemID);
+      let itemIndex = e.currentTarget.id;
+      $("#app").html(`<section> 
+      <div class="row">
+        <h1>${ITEMS[itemIndex].itemType}</h1>
+        <div class="col">
+        <div class="top">
+          <div class="itemPrice">${ITEMS[itemIndex].itemPrice}</div>
+          <br />
+        </div>
+      
+        <div class="imgall">
+          <div class="itemImage">
+            <img src="img/${ITEMS[itemIndex].itemImage}" alt="" />
+          </div>
+      
+          <div class="desc">
+            <div class="itemDesc">${ITEMS[itemIndex].itemDesc}</div>
+            <br />
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="back">BACK</div>
+    </section>
+    
+    `)
+    addBackListener();
     });
   }
+
+function addBackListener() {
+  $(".back").click(function(){
+    $("#app").html("");
+    loadData();
+  })
+}
 
   
   $(document).ready(function () {
