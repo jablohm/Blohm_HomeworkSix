@@ -1,124 +1,124 @@
-var ITEMS = [
+var PRODS = [
     // ONE
     {
-      itemType: "Backpack",
-      itemPrice: "$90.00",
-      itemImage: "1.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Backpack",
+      prodPrice: "$90.00",
+      prodImage: "1.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   ONE
   
 
     // TWO
     {
-        itemType: "Mug",
-        itemPrice: "15.00",
-        itemImage: "2.png",
-        itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+        prodType: "Mug",
+        prodPrice: "15.00",
+        prodImage: "2.png",
+        prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
       },
     //   TWO
   
 
     // THREE
     {
-      itemType: "Kettle",
-      itemPrice: "$20.00",
-      itemImage: "3.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Kettle",
+      prodPrice: "$20.00",
+      prodImage: "3.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   THREE
   
 
     // FOUR
     {
-        itemType: "Thermos + Mug Bundle",
-        itemPrice: "$25.00",
-        itemImage: "4.png",
-        itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+        prodType: "Thermos + Mug Bundle",
+        prodPrice: "$25.00",
+        prodImage: "4.png",
+        prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
       },
     //   FOUR
   
 
     // FIVE
     {
-      itemType: "Tent",
-      itemPrice: "$113.00",
-      itemImage: "5.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Tent",
+      prodPrice: "$113.00",
+      prodImage: "5.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   FIVE
   
 
     // SIX
     {
-      itemType: "Portable Lantern",
-      itemPrice: "$20.00",
-      itemImage: "6.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Portable Lantern",
+      prodPrice: "$20.00",
+      prodImage: "6.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   SIX
   
 
     // SEVEN
     {
-      itemType: "Multi-purpose Knife",
-      itemPrice: "$35.00",
-      itemImage: "7.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Multi-purpose Knife",
+      prodPrice: "$35.00",
+      prodImage: "7.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   SEVEN
   
 
     // EIGHT
     {
-      itemType: "Boots",
-    itemPrice: "$75.00",
-      itemImage: "8.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Boots",
+      prodPrice: "$75.00",
+      prodImage: "8.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   EIGHT
   
 
     // NINE
     {
-      itemType: "Men's Sleeping Bag",
-      itemPrice: "$50.00",
-      itemImage: "9.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Men's Sleeping Bag",
+      prodPrice: "$50.00",
+      prodImage: "9.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     },
     //   NINE
   
 
     // TEN
     {
-      itemType: "Women's Sleeping Bag",
-      itemPrice: "$50.00",
-      itemImage: "10.png",
-      itemDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
+      prodType: "Women's Sleeping Bag",
+      prodPrice: "$50.00",
+      prodImage: "10.png",
+      prodDesc: "Gear up for your next camping trip with the perfect all-in-one solution for outdoor enthusiasts.",
     }
     //   TEN
   ];
 
   
   function loadData() {
-    $.each(ITEMS, function (index, item) {
-      // console.log(item.itemType);
+    $.each(PRODS, function (index, prod) {
+      // console.log(prod.prodType);
       $("#app").append(`<section id="${index}">
       <div class="row">
-        <h1>${item.itemType}</h1>
+        <h1>${prod.prodType}</h1>
         <div class="col">
           <div class="top">
-            <div class="itemPrice">${item.itemPrice}</div>
+            <div class="itemPrice">${prod.prodPrice}</div>
             <br />
           </div>
     
           <div class="imgall">
             <div class="itemImage">
-              <img src="img/${item.itemImage}" alt="" />
+              <img src="img/${prod.prodImage}" alt="" />
             </div>
     
             <div class="desc">
-              <div class="itemDesc">${item.itemDesc}</div>
+              <div class="itemDesc">${prod.prodDesc}</div>
               <br />
             </div>
             
@@ -136,23 +136,23 @@ var ITEMS = [
   
   function initListeners() {
     $(".col").click(function (e) {
-      let itemIndex = e.currentTarget.id;
+      let prodIndex = e.currentTarget.id;
       $("#app").html(`<section> 
       <div class="row">
-        <h1>${ITEMS[itemIndex].itemType}</h1>
+        <h1>${PRODS[prodIndex].prodType}</h1>
         <div class="col">
         <div class="top">
-          <div class="itemPrice">${ITEMS[itemIndex].itemPrice}</div>
+          <div class="itemPrice">${PRODS[prodIndex].prodPrice}</div>
           <br />
         </div>
       
         <div class="imgall">
           <div class="itemImage">
-            <img src="img/${ITEMS[itemIndex].itemImage}" alt="" />
+            <img src="img/${PRODS[prodIndex].prodImage}" alt="" />
           </div>
       
           <div class="desc">
-            <div class="itemDesc">${ITEMS[itemIndex].itemDesc}</div>
+            <div class="itemDesc">${PRODS[prodIndex].prodDesc}</div>
             <br />
           </div>
         </div>
