@@ -10,18 +10,21 @@ section {
     h1 {
         font-style: oblique;
         letter-spacing: 1pt;
+        cursor: pointer;
+ 
     }
     .col {
+        cursor: pointer;
         justify-content: center;
         align-items: center;
         text-align: left;
-        width: 75%;
+        width: 700px;
 
         
         .imgall {
             display: flex;
             align-items: center;
-            .itemImage{
+                        .itemImage{
                 img {
                                     width: 400px;
                 height: 400px;
@@ -34,6 +37,7 @@ section {
                 width: 250px;
                 text-align: left;
                 margin-left: 50px;
+                font-size: 22pt;
             }
         }
 

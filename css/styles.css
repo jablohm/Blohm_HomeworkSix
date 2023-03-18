@@ -43,12 +43,14 @@ section .row {
 section .row h1 {
   font-style: oblique;
   letter-spacing: 1pt;
+  cursor: pointer;
 }
 section .row .col {
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   text-align: left;
-  width: 75%;
+  width: 700px;
 }
 section .row .col .imgall {
   display: flex;
@@ -63,6 +65,7 @@ section .row .col .imgall .desc {
   width: 250px;
   text-align: left;
   margin-left: 50px;
+  font-size: 22pt;
 }
 
 footer {

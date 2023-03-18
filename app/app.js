@@ -129,11 +129,19 @@ var ITEMS = [
     
     `);
     });
+
+        initListeners();
+
   }
   
+  function initListeners() {
+    $(".col").click(function (e) {
+      let itemID = e.currentTarget.id;
+      console.log(itemID);
+    });
+  }
 
   
   $(document).ready(function () {
     loadData();
-    // initListeners();
   });
