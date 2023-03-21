@@ -135,11 +135,13 @@ var PRODS = [
   }
   
   function initListeners() {
-    $(".col").click(function (e) {
+    $("section").click(function (e) {
       let prodIndex = e.currentTarget.id;
+      console.log(prodIndex);
       $("#app").html(`<section> 
       <div class="row">
         <h1>${PRODS[prodIndex].prodType}</h1>
+
         <div class="col">
         <div class="top">
           <div class="itemPrice">${PRODS[prodIndex].prodPrice}</div>
